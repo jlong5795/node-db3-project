@@ -52,6 +52,7 @@ router.post('/', (req, res) => {
   Schemes.add(schemeData)
   .then(scheme => {
     res.status(201).json(scheme);
+    // generic get
   })
   .catch (err => {
     res.status(500).json({ message: 'Failed to create new scheme' });
